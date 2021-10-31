@@ -5,13 +5,13 @@
     $nombre = $_POST['nom'];
     $apellido = $_POST['apell'];
     $genero = $_POST['gen'];
-    $fecha_nacmiento = $_POST['naci'];
+    $fecha_nacimiento = $_POST['naci'];
     $telefono = $_POST['tel'];
-    $direcicon = $_POST['direc'];
+    $direccion = $_POST['direc'];
     $EPS = $_POST['eps'];
 
-    $sql = "INSERT INTO paciente (doc_paciente, tipo_documento, nombre, apellido, genero, fecha_nacmiento, telefono, direcicon, EPS) 
-    VALUES ('$doc_paciente','$tipo_documento','$nombre','$apellido','$genero','$fecha_nacmiento','$telefono','$direcicon','$EPS')";
+    $sql = "INSERT INTO paciente (doc_paciente, tipo_documento, nombre, apellido, genero, fecha_nacimiento, telefono, direccion, EPS) 
+    VALUES ($doc_paciente,'$tipo_documento','$nombre','$apellido','$genero','$fecha_nacimiento',$telefono,'$direccion','$EPS')";
 
     $ver_documento = mysqli_query($conn, "SELECT * FROM paciente WHERE doc_paciente = '$doc_paciente'");
 
@@ -39,7 +39,7 @@ if(mysqli_num_rows($ver_documento) > 0){
   echo '
   <script>
     alert("Eror - No fue posible cargar los datos - intente nuevamente")
-    window.location = "../../Proyecto/pages/registro_paciente_Solmedi.html"
+    window.location = "../../Proyecto/pages/registro_paciente_Solmedi.php"
   </script>
   
   ';
