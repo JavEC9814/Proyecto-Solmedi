@@ -159,17 +159,10 @@
           <div class="col-md-6">
             <label class="form-label">Fecha de nacimiento</label>
             <input type="date" class="form-control" name="naci" required>
-
-            <?php
-
-                
-
-            ?>
-
           </div>
 
           <div class="col-md-2">
-              <label class="form-label">telefono paciente</label>
+              <label class="form-label">Telefono paciente</label>
               <input type="number" class="form-control" name="tel" required>
           </div>
 
