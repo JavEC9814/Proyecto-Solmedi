@@ -23,6 +23,7 @@ if($filas){
   
   '
     ?>
+    
     <?php
     include("../../Proyecto/pages/signup_Solmedi.html");
 
