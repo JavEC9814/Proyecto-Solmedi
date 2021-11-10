@@ -16,83 +16,17 @@
     </head>
 
     <body>
-      <nav class="navbar navbar-dark navbar-expand-lg navbar-light bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../pages/inicio_Solmedi.html">SOLMEDI</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Usuario
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="">Cerrar Sesion</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
-            </div>
-        </div>
-      </nav>
+      
+    <?php
+      include_once('../../Proyecto/php/header.php');
+    ?>
 
-      <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 350px; height: 900px;" id="div2">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-          <svg class="bi me-2" width="40" height="100"><use xlink:href="#bootstrap"></use></svg>
-          <span class="fs-4">SOLMEDI</span>
-        </a>
-        <hr>
-        <ul class="nav nav-pills flex-column mb-5">
-          <li class="nav-item">
-            <a href="#" class="nav-link " aria-current="page">
-              <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-                Configuracion
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="nav-link text-white">
-              <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-                Usuario
-            </a>
-          </li>
-              
-          <li>
-            <a href="#" class="nav-link text-white">
-              <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-                Seguridad
-            </a>
-          </li>
-              
-          <li>
-            <a href="#" class="nav-link text-white">
-              <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-                Consultas
-            </a>
-          </li>
-          
-          <li>
-            <a href="#" class="nav-link text-white">
-              <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-                Customers
-            </a>
-          </li>
-
-        </ul>
-
-        <hr>
+    <?php
+      include_once('../../Proyecto/php/desplegable.php');
+    ?>
         
         <div class="dropdown">
-          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="#" alt="" width="32" height="32" class="rounded-circle me-2">
-              <strong>Usuario</strong>
-          </a>
+
           <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
             <li><a class="dropdown-item" href="../../Proyecto/index.html">Cerrar sesion</a></li>
           </ul>
@@ -100,7 +34,7 @@
       </div>
 
       <div id="div1">
-        <form class="row g-3" action="../../Proyecto/php/registro_datos.php"  method="POST">
+        <form class="row g-3" action="../../Proyecto/php/registro_paciente.php"  method="POST">
           <div class="col-md-2">
             <label class="form-label" >Tipo de documento</label>
             <select type="text" class="form-select" name="docu" required>
@@ -156,19 +90,24 @@
             </select>
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-4">
             <label class="form-label">Fecha de nacimiento</label>
             <input type="date" class="form-control" name="naci" required>
           </div>
 
           <div class="col-md-2">
-              <label class="form-label">Telefono paciente</label>
-              <input type="number" class="form-control" name="tel" required>
+              <label class="form-label">Ciudad</label>
+              <input type="text" class="form-control" name="ciu" required>
           </div>
 
           <div class="col-md-2">
               <label class="form-label">Dirección paciente</label>
               <input type="text" class="form-control" name="direc" required>
+          </div>
+
+          <div class="col-md-2">
+              <label class="form-label">Telefono paciente</label>
+              <input type="number" class="form-control" name="tel" required>
           </div>
 
           <div class="col-md-4">
@@ -191,12 +130,11 @@
               </select>
             </div>
 
+
             <div class="col-12">
               <input class="btn btn-outline-dark" type="submit" value="Siguiente">
                 <!--<a class="btn btn-outline-dark" href="../../Proyecto/pages/registro_datos_Solmedi.html">Siguiente</a>-->
                 <!--<button type="button" class="btn btn-outline-dark" href="../../Proyecto/pages/recuperar_Solmedi.html">Siguiente</button>-->
-                <button type="button" class="btn btn-outline-dark">Actualizar</button>
-                <button type="button" class="btn btn-outline-dark">Consultar</button>
             </div>
         </form>
       </div>

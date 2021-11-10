@@ -33,6 +33,7 @@ genero varchar (50) not null,
 fecha_nacimiento date not null,
 telefono int (50) not null,
 direccion varchar (100) not null,
+ciudad_paciente varchar (50) not null,
 EPS varchar (100) not null);
 
 create table servicio
