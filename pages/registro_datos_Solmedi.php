@@ -10,14 +10,16 @@
             rel="stylesheet"
             integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
             crossorigin="anonymous">
-
+            <link rel="shorcut icon" type="image/x-icon" href="../assets/img/pestaña.JPG"> 
+            <link rel="stylesheet" href="../assets/css/estilos_registro.css"> 
         <link rel="stylesheet" href="../assets/css/estilos_registro.css"> 
 
         <title>Solmedi</title>
     </head>
 
     <body>
-        
+     
+    <div>
       <?php
         include_once('../../Proyecto/php/header.php');
       ?>
@@ -25,25 +27,10 @@
       <?php
         include_once('../../Proyecto/php/desplegable.php');
       ?>
-
-
-            <div class="dropdown">
-              <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="#" alt="" width="32" height="32" class="rounded-circle me-2">
-                <strong>Usuario</strong>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                <li><a class="dropdown-item" href="#">New project...</a></li>
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Sign out</a></li>
-              </ul>
-            </div>
-          </div>
+    </div>
 
         <div id="div1">
-            <form class="row g-3">
+            <form class="row g-3"  action="../../Proyecto/pages/inicio_Solmedi.php"  method="POST">
                 <div class="col-3">
                   <label for="inputAddress" class="form-label">id HC</label>
                   <input type="text" class="form-control" id="inputAddress" placeholder="">
@@ -75,19 +62,12 @@
    
                 <div class="col-md-2">
                 </div>
+    
                 <div class="col-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                      Acepto politica de tratamiento de datos
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12">
-                    <button type="button" class="btn btn-outline-dark">Crear</button>
-                    <button type="button" class="btn btn-outline-dark">Actualizar</button>
-                    <button type="button" class="btn btn-outline-dark">Consultar</button>
-                </div>
+              <input class="btn btn-outline-dark" type="submit" value="Finalizar">
+                <!--<a class="btn btn-outline-dark" href="../../Proyecto/pages/registro_datos_Solmedi.html">Siguiente</a>-->
+                <!--<button type="button" class="btn btn-outline-dark" href="../../Proyecto/pages/recuperar_Solmedi.html">Siguiente</button>-->
+            </div>
               </form>
         </div>
         

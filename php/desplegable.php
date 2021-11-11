@@ -49,7 +49,8 @@
           
 
           <hr>
-
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>  
+          <hr>
           <li>
           <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="../../Proyecto/assets/img/pestaña.JPG" alt="" width="32" height="32" class="rounded-circle me-2">
@@ -57,14 +58,12 @@
 
           </a>
           <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                <li><a class="dropdown-item" href="#">New project...</a></li>
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">(Por definir)</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                <li><a class="dropdown-item" href="../../Proyecto/index.html">Cerrar cesion</a></li>
               </ul>
           </li>
-          <hr>
+        
         </ul>
 
 

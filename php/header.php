@@ -36,12 +36,28 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="../pages/registro_paciente_Solmedi.php">Registro datos</a>
+                        <a class="nav-link" href="../pages/registro_paciente_Solmedi.php">Registro de Paciente</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../pages/consultar_Solmedi.php">Consulta de pacientes</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/graficas.php">Estadisticas</a>
+                    </li>
 
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/registro_servicio_Solmedi.php">Registro servicio (prueba)</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/registro_datos_Solmedi.php">Registro datos HC(prueba)</a>
+                    </li>
+                    
+
+
+                    
                     <li class="nav-item dropdown">
 
                         <a class="nav-link dropdown-toggle" href="#"

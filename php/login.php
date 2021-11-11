@@ -20,8 +20,7 @@ if($filas){
   <script>
     alert("Datos incorrectos - Por favor verifique nuevamente o registrese en el siguiente formato")
   </script>
-  
-  '
+  ';
     ?>
     
     <?php
@@ -32,3 +31,5 @@ if($filas){
 }
 mysqli_free_result($resultado);
 mysqli_close($conn);
+
+?>

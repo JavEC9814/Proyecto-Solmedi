@@ -10,7 +10,8 @@
             rel="stylesheet"
             integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
             crossorigin="anonymous">
-
+            <link rel="shorcut icon" type="image/x-icon" href="../assets/img/pestaña.JPG"> 
+            <link rel="stylesheet" href="../assets/css/estilos_registro.css"> 
         <link rel="stylesheet" href="../assets/css/estilos_registro.css"> 
 
         <title>Solmedi</title>
@@ -29,35 +30,41 @@
           </div>
 
         <div id="div1">
-            <form class="row g-3">
+            <form class="row g-3"  action="../../Proyecto/pages/registro_datos_Solmedi.php">
                 <div class="col-md-2">
                   <label for="inputAddress" class="form-label">Id servicio</label>
                   <input type="number" class="form-control" id="inputAddress" placeholder="">
                 </div>
-                <div class="col-6">
+                <!--<div class="col-6">
                     <label for="exampleFormControlTextarea1" class="form-label">Tipo de servicio</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
-                </div>
+                </div> -->
+
+                <div class="col-md-3">
+                <label for="inputState" class="form-label" >Tipo de servicio</label>
+                <select id="inputState" class="form-select" name="docu" required>
+                  <option selected>seleccione el tipo de servicio</option>
+                  <option >Servicio comunitario</option>
+                  <option >Servicio accidente de transito</option>
+                </select>
+              </div>
+
+
                 <div class="col-md-6">
-                  <label for="inputCity" class="form-label">Fecha de nacimiento</label>
+                  <label for="inputCity" class="form-label">Fecha de atencion</label>
                   <input type="date" class="form-control" id="inputCity">
                 </div>
                 <div class="col-md-2">
-                  <label for="inputCity" class="form-label">Fecha de nacimiento</label>
+                  <label for="inputCity" class="form-label">Hora de atencion</label>
                   <input type="time" class="form-control" id="inputCity">
                 </div>
+
                 <div class="col-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                      Acepto politica de tratamiento de datos
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12">
-                    <button type="button" class="btn btn-outline-dark">Siguiente</button>
-                </div>
-              </form>
+              <input class="btn btn-outline-dark" type="submit" value="Siguiente">
+                <!--<a class="btn btn-outline-dark" href="../../Proyecto/pages/registro_datos_Solmedi.html">Siguiente</a>-->
+                <!--<button type="button" class="btn btn-outline-dark" href="../../Proyecto/pages/recuperar_Solmedi.html">Siguiente</button>-->
+            </div>
+        </form>
         </div>
         
         
