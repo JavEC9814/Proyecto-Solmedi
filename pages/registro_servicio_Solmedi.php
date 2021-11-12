@@ -30,10 +30,10 @@
           </div>
 
         <div id="div1">
-            <form class="row g-3"  action="../../Proyecto/pages/registro_datos_Solmedi.php">
+            <form class="row g-3"  action="../../Proyecto/php/registro_servicio.php" method="POST">
                 <div class="col-md-2">
                   <label for="inputAddress" class="form-label">Id servicio</label>
-                  <input type="number" class="form-control" id="inputAddress" placeholder="">
+                  <input type="number" class="form-control" id="inputAddress" placeholder="(numero max. 10 unidades)" name="idser" required>
                 </div>
                 <!--<div class="col-6">
                     <label for="exampleFormControlTextarea1" class="form-label">Tipo de servicio</label>
@@ -42,21 +42,24 @@
 
                 <div class="col-md-3">
                 <label for="inputState" class="form-label" >Tipo de servicio</label>
-                <select id="inputState" class="form-select" name="docu" required>
+                <select id="inputState" class="form-select" name="tiserv" required>
                   <option selected>seleccione el tipo de servicio</option>
-                  <option >Servicio comunitario</option>
-                  <option >Servicio accidente de transito</option>
+                  <option >Medicina General</option>
+                  <option >Odontologia General</option>
+                  <option >Cardiologia</option>
+                  <option >Medicina Interna</option>
+                  <option >Fisioterapia</option>
                 </select>
               </div>
 
 
                 <div class="col-md-6">
                   <label for="inputCity" class="form-label">Fecha de atencion</label>
-                  <input type="date" class="form-control" id="inputCity">
+                  <input type="date" class="form-control" id="inputCity" name="fechaten" required>
                 </div>
                 <div class="col-md-2">
                   <label for="inputCity" class="form-label">Hora de atencion</label>
-                  <input type="time" class="form-control" id="inputCity">
+                  <input type="time" class="form-control" id="inputCity" name="hoaten" required>
                 </div>
 
                 <div class="col-12">

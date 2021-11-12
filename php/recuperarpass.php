@@ -13,9 +13,9 @@ if ($resultado2){
     $name = $datos['nombre_usuario'];
 
     $para = $correo;
-    $titulo = "Recuperar contraseña";
-    $msg = "Buen dia Señor(a) ".$name.".\n
-            Tu contraseña es: ".$pass.".\n
+    $titulo = "Recuperar contrasena";
+    $msg = "Buen dia Senor(a) ".$name.".\n
+            Tu contrasena es: ".$pass.".\n
             Recuerda no compartir esta informacion con ninguna persona"."\n
             Buen dia, ATT: Solmedi";
     $tucorreo = "From: solmedisas@gmail.com";

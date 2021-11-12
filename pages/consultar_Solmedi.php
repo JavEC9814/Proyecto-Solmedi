@@ -16,23 +16,24 @@
 </head>
 <body>
 
-
+<div class="overflow-hidden">
 <?php
 include_once('../../Proyecto/php/header.php');
 ?>
-
+</div>
 
 
 <div style="float: right; width: 80%; height: 100%; ">
 
     <nav   class="navbar navbar-light bg-light">
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+        <form class="d-flex" method="post">
+            <input class="form-control me-2" name="inp" type="search" placeholder="Buscar" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Consultar</button>
         </form>
     </nav>
 
-        <table class="table table-bordered">
+    <div class="overflow-auto p-0 mb-0 mb-md-0 mr-md-0 bg-light" style=" max-width: 2590px; max-height: 810px;">
+    <table class="table table-bordered">
 
             <thead>
               <tr>
@@ -52,10 +53,12 @@ include_once('../../Proyecto/php/header.php');
               <?php
               include '../../Proyecto/php/Database.php';
               $query="SELECT * from paciente";
+
               $resultado=mysqli_query($conn,$query);
 
               while($mostrar=mysqli_fetch_array($resultado)){
               ?>
+
               <tr>
                 <td><?php echo $mostrar['doc_paciente']?></td>
                 <td><?php echo $mostrar['tipo_documento']?></td>
@@ -77,11 +80,13 @@ include_once('../../Proyecto/php/header.php');
                 </svg></button>
                 </td>
               </tr>
+
               <?php
               }
               ?>
             </tbody>
           </table>
+          </div>
 </div>
 
 

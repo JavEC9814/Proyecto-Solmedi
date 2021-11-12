@@ -27,37 +27,55 @@
       <?php
         include_once('../../Proyecto/php/desplegable.php');
       ?>
-    </div>
 
+      <?php
+        //include('../../Proyecto/php/registro_servicio.php');
+      ?>
+ 
+    </div>
         <div id="div1">
+
+        <?php
+        include '../../Proyecto/php/Database.php';
+        //select * from servicio ORDER BY id_servicio DESC;
+        $query="SELECT id_servicio from servicio where ident=(SELECT max(ident) from servicio);" ;
+        $query2="SELECT doc_paciente from paciente where ident_pac=(SELECT max(ident_pac) from paciente);" ;
+        $query3="SELECT nombre_usuario from usuario where nombre_usuario=(SELECT max(nombre_usuario) from usuario);" ;
+        $id_s=mysqli_query($conn,$query);
+        $id_pac=mysqli_query($conn,$query2);
+        $id_usu=mysqli_query($conn,$query3);
+        while($mostrar=mysqli_fetch_array($id_s)and$mostrar2=mysqli_fetch_array($id_pac)and$mostrar3=mysqli_fetch_array($id_usu)){
+      ?>
+
             <form class="row g-3"  action="../../Proyecto/pages/inicio_Solmedi.php"  method="POST">
                 <div class="col-3">
-                  <label for="inputAddress" class="form-label">id HC</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="">
+                  <label for="inputAddress" class="form-label">Id HC </label>
+                  <input type="text" name="idhc" class="form-control" id="inputAddress" placeholder="(numero max. 10 unidades)">
                 </div>
+                
                 <div class="col-md-3">
                   <label for="id" class="form-label">Documento del paciente</label>
-                  <input type="text" class="form-control" id="Id">
+                  <input class="form-control" name="docpa" id="Id" value ="<?php echo $mostrar2['doc_paciente']?>" readonly>
                 </div>
                 <div class="col-md-3">
-                  <label for="Usuario" class="form-label">id de Usuario </label>
-                  <input type="text" class="form-control" id="inputUser">
+                  <label for="Usuario" class="form-label">Nombre de enfermer@ que atiende</label>
+                  <input class="form-control" name="nom_enfer" id="inputUser" value ="<?php echo $mostrar3['nombre_usuario']?>" readonly>
                 </div>
                 <div class="col-md-3">
                   <label for="inputAddress2" class="form-label">Id servicio</label>
-                  <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                  <input class="form-control" name="Id_ser" id="inputAddress2"  value ="Sol<?php echo $mostrar['id_servicio']?>0000" readonly >
                 </div>
                 <div class="col-6">
                     <label for="exampleFormControlTextarea1" class="form-label">Descripción del servicio</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" name="des_ser" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
                 <div class="col-6">
                     <label for="exampleFormControlTextarea1" class="form-label">Diagnostico</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" name="diag" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div> 
                 <div class="col-6">
                     <label for="exampleFormControlTextarea1" class="form-label">Examen fisico inicial</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" name="exa_fis" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div> 
    
                 <div class="col-md-2">
@@ -69,6 +87,9 @@
                 <!--<button type="button" class="btn btn-outline-dark" href="../../Proyecto/pages/recuperar_Solmedi.html">Siguiente</button>-->
             </div>
               </form>
+              <?php
+              }
+              ?>
         </div>
         
         
