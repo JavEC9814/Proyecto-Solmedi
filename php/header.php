@@ -54,8 +54,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../pages/registro_datos_Solmedi.php">Registro datos HC(prueba)</a>
                     </li>
-                    
--->
+                    -->
+
 
                     
                     <li class="nav-item dropdown">

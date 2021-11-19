@@ -47,35 +47,35 @@
         while($mostrar=mysqli_fetch_array($id_s)and$mostrar2=mysqli_fetch_array($id_pac)and$mostrar3=mysqli_fetch_array($id_usu)){
       ?>
 
-            <form class="row g-3"  action="../../Proyecto/pages/inicio_Solmedi.php"  method="POST">
+            <form class="row g-3"  action="../../Proyecto/php/registro_datos.php"  method="POST">
                 <div class="col-3">
                   <label for="inputAddress" class="form-label">Id HC </label>
-                  <input type="text" name="idhc" class="form-control" id="inputAddress" placeholder="(numero max. 10 unidades)">
+                  <input type="number" name="idhc" class="form-control"  placeholder="(numero max. 10 unidades)">
                 </div>
                 
                 <div class="col-md-3">
                   <label for="id" class="form-label">Documento del paciente</label>
-                  <input class="form-control" name="docpa" id="Id" value ="<?php echo $mostrar2['doc_paciente']?>" readonly>
+                  <input type="number" class="form-control" name="docpa"  value ="<?php echo $mostrar2['doc_paciente']?>" readonly>
                 </div>
                 <div class="col-md-3">
                   <label for="Usuario" class="form-label">Nombre de enfermer@ que atiende</label>
-                  <input class="form-control" name="nom_enfer" id="inputUser" value ="<?php echo $mostrar3['nombre_usuario']?>" readonly>
+                  <input type="text" class="form-control" name="nom_enfer"  value ="<?php echo $mostrar3['nombre_usuario']?>" readonly>
                 </div>
                 <div class="col-md-3">
                   <label for="inputAddress2" class="form-label">Id servicio</label>
-                  <input class="form-control" name="Id_ser" id="inputAddress2"  value ="Sol<?php echo $mostrar['id_servicio']?>0000" readonly >
+                  <input type="number" class="form-control" name="Id_ser"  value ="<?php echo $mostrar['id_servicio']?>"  readonly>
                 </div>
                 <div class="col-6">
                     <label for="exampleFormControlTextarea1" class="form-label">Descripción del servicio</label>
-                    <textarea class="form-control" name="des_ser" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <input type="text" class="form-control" name="des_ser"  ></input>
                 </div>
                 <div class="col-6">
                     <label for="exampleFormControlTextarea1" class="form-label">Diagnostico</label>
-                    <textarea class="form-control" name="diag" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <input type="text" class="form-control" name="diag"  ></input>
                 </div> 
                 <div class="col-6">
                     <label for="exampleFormControlTextarea1" class="form-label">Examen fisico inicial</label>
-                    <textarea class="form-control" name="exa_fis" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <input type="text" class="form-control" name="exa_fis"  ></input>
                 </div> 
    
                 <div class="col-md-2">

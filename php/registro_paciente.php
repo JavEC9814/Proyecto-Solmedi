@@ -20,7 +20,7 @@ if(mysqli_num_rows($ver_documento) > 0){
     echo'
     <script>
     alert("Documento ya registrado, verifique nuevamente")
-    window.location = "../../Proyecto/pages/inicio_Solmedi.html"
+    window.location = "../../Proyecto/pages/inicio_Solmedi.php"
     </script>
     ';
     exit();

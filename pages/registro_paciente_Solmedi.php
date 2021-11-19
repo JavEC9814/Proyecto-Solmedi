@@ -67,7 +67,7 @@
 
           <div class="col-md-2">
             <label class="form-label">Apellidos paciente</label>
-            <input type="text" class="form-control" name="apell" required>
+            <input type="text" class="form-control" name="apell" value="">
           </div>
 
           <div class="col-md-2">
